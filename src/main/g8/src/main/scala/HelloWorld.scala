@@ -10,6 +10,6 @@ object HelloWorld extends App {
     for {
       _    <- putStrLn("Hello! What is your name?")
       name <- getStrLn
-      _    <- putStrLn(s"Hello, $name, welcome to ZIO!")
+      _    <- putStrLn(s"Hello, \$name, welcome to ZIO!")
     } yield ()
 }
