@@ -23,7 +23,7 @@ lazy val root =
 lazy val library =
   new {
     object Version {
-      val zio = "1.0.0-RC17"
+      val zio = "1.0.0-RC18-2"
     }
     val zio        = "dev.zio" %% "zio"          % Version.zio
     val zioTest    = "dev.zio" %% "zio-test"     % Version.zio
