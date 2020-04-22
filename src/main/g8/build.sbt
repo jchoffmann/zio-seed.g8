@@ -43,7 +43,17 @@ lazy val commonSettings =
   Seq(
     name := "$name$",
     scalaVersion := "2.13.1",
-    organization := "com.example"
+    organization := "com.example",
+    scalacOptions ++= Seq(
+      "-encoding", "UTF-8",    // source files are in UTF-8
+      "-deprecation",          // warn about use of deprecated APIs
+      "-unchecked",            // warn about unchecked type parameters
+      "-feature",              // warn about misused language features
+      "-language:higherKinds", // allow higher kinded types without `import scala.language.higherKinds`
+      "-Xlint",                // enable handy linter warnings
+      "-Xfatal-warnings"       // turn compiler warnings into errors
+    ) // http://downloads.typesafe.com/website/presentations/ScalaDaysSF2015/Toward%20a%20Safer%20Scala%20@%20Scala%20Days%20SF%202015.pdf
+
   )
 
 lazy val scalafmtSettings =
